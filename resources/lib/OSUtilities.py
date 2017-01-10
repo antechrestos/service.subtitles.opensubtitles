@@ -36,7 +36,7 @@ class OSDBServer:
         else:
           return None
 
-      if len(item['tvshow']) > 0:
+      if len(item['tvshow']) > 0 and len(item['season']) > 0 and len(item['episode']) > 0:
         OS_search_string = ("%s S%.2dE%.2d" % (item['tvshow'],
                                                 int(item['season']),
                                                 int(item['episode']),)
